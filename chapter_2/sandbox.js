@@ -100,9 +100,87 @@
 //----Lesson 14----- Null ja undefined. Undefined tulee automaattisesti.
 // Null pitää itse määrittää
 
-let age = null;
+//let age = null;
 
-console.log(age, age + 3, `the age is ${age}`)
+//console.log(age, age + 3, `the age is ${age}`)
 
 
 //----Lesson 15-----
+//booleans and comparisons
+//console.log(true, false, "true", "false");
+
+//let email = 'someOne@gmail.com';
+
+//let names = ['mario', 'luigi', 'toad']
+//let result = email.includes('@');
+//let result = names.includes('luigi')
+//console.log(result);
+
+//let age = 25;
+
+//console.log(age == 25);
+//console.log(age == 30);
+//console.log(age != 30);
+
+//console.log(age > 20);
+//console.log(age < 20);
+//console.log(age <= 25);
+//console.log(age >= 25);
+
+//let name ='shaun';
+
+//pienet kirjaimet ovat "isompia" kuin isot kirjaimet.
+//Myöhemmin aakkosissa tuleva kirjain on isompi kuin aikaisempi.
+//esim c on isompi kuin a ja isompi kuin C.
+
+//console.log(name == 'shaun');
+//console.log(name == 'Shaun');
+//console.log(name > 'crystal');
+//console.log(name > 'Shaun');
+//console.log(name > 'Crystal');
+
+//-----Lesson 16-----
+
+//loose comparison(different types can still be equal)
+
+//let age = 25;
+
+//console.log(age == 25);
+//console.log(age == '25');
+//console.log(age != 25);
+//console.log(age != '25');
+
+//strict comparison (different types cannot be equal)
+
+//console.log(age === 25);
+//console.log(age === '25');
+//console.log(age !== 25);
+//console.log(age !== '25');
+
+
+//-----Lesson 17-----
+
+//type conversion
+
+let score = '100';
+
+//score =Number(score)
+
+//console.log(score + 1);
+
+//console.log(typeof score);
+
+//let result = Number('hello');
+
+//let result = String(50);
+
+/*There are truthy and falsy values in JS. 100 is a truthy value.
+So some values become true and some false when converted to Boolean.
+0 is falsy. Positive and negative numbers are truthy, 0 falsy.
+Strings are truthy.
+*/
+//let result = Boolean (100);
+//let result = Boolean ('0');
+let result = Boolean ('');
+
+console.log(result, typeof result);
