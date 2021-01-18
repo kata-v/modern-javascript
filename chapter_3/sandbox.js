@@ -1,176 +1,154 @@
-// for loops
+//Section 4
+//Lesson 30
+//Good practise to first write the function and call it only after that.
 
-// for(let i = 0; i < 5; i++){
-//   console.log('loop: ', i);
-// }
-
-//const names = ['shaun', 'mario', 'luigi'];
-
-//for(let i = 0; i < names.length; i++){
-  // console.log(names[i]);
-  //let html = `<div>${names[i]}</div>`;
-  //console.log(html);
-//}
-
-//-----lesson 20----
-//while loops
-
-//let i = 0;
-
-//while(1 < 5) { 
- // console.log('in loop: ', i);
- // i++;
-//}
-
-//const names = ['shaun', 'mario', 'luigi'];
-
-//let i = 0;
-
-//while(i< names.length){
- // console.log(names[i]);
- // i++;
-//}
-
-//----lesson 21----
-// do while loops
-//let i = 5;
-
-//do{
- // console.log('val of i is: ' + i);
- // i++;
-//} while(i<5);
-
-//----lesson 22----
-//if statements
-// const age = 25;
-
-// if(age > 20){
-//   console.log('You are over 20 years old.');
-// }
-
-// const ninjas = ['shaun', 'ryu', 'chun-li', 'yoshi'];
-
-// if(ninjas.length > 4){
-//   console.log("That's a lot of ninjas.");
-// }
-
-//--- lesson 23---
-//else if statements
-// const password = 'p@ss';
-
-// if(password.length >= 12){
-//   console.log('That password is mighty strong!');
-// } else if(password.length >= 8) {
-//   console.log('This password is long enough!');
-// } else {
-//   console.log('This password is not long enough!');
-// }
-
-//----lesson 24----
-//logical operators - OR || and AND &&
-
-// const password = 'p@ss';
-
-// if(password.length >= 12 && password.includes('@')){
-//   console.log('That password is mighty strong!');
-// } else if(password.length >= 8 || password.includes('@') && password.length >= 5) {
-//   console.log('This password is strong enough!');
-// } else {
-//   console.log('This password is not long enough!');
-// }
-
-//---Lesson 25-----
-//logical NOT (!)
-
-// let user = false;
-
-// if(!user){
-//   console.log('You must be logged in to continue!')
-// }
-
-//  console.log(!true);
-//  console.log(!false);
-
-//----lesson 26----
-// break and continue
-//Continue hyppää ulos kyseisestä luuppikerrasta, mutta jatkaa seuraavaan luuppiin
-//Break lopettaa koko homman juuri kyseiseen komentoon. Eli kaiki mitä haluaa
-//ulos kun break kohta saavutetaan pitää olla ennen sitä break komentoa
-
-// const scores = [50, 25, 0, 30, 100, 20, 10];
-
-// for(let i = 0; i < scores.length; i++) {
-
-// if(scores[i] === 0){
-//   continue;
-// }
-
-//  console.log('your score: ', scores[i]);
-
-//  if(scores[i] === 100){
-//    console.log('Congrats, you got the top score!');
-//    break;
-//  }
-// }
-
-
-//----Lesson 27----
-//Switch statements
-//Switch uses a strict equality === so type and value
-// const grade = 'P';
-
-// switch (grade) {
-//   case 'A':
-//     console.log('You got an A!');
-//     break;
-//   case 'B':
-//     console.log('You got an B!');
-//     break;
-//   case 'C':
-//     console.log('You got an C!');
-//     break;
-//   case 'D':
-//     console.log('You got an D!');
-//     break;
-//   case 'E':
-//     console.log('You got an E!');
-//     break;
-//   default:
-//     console.log('Not a valid grade');
-// }
-
-//using if statements
-
-// if (grade === 'A'){
-
-// } else if (grade === 'B'){
-
-// } else if(grade === 'C'){
-
-// } else if(grade === 'E'){
-
-// } else {
+//function declaration. Can be hoisted up. Functions can be declared even after calling them.
+// function greet () {
+//   console.log('hello there!');
 
 // }
 
-//----Lesson 28----
-//variables & block {} scope
-// let and const, they have block scope(demonstated below)
-// var on the other hand has no block scope. It can be defined inside a block code and be accessed somewhere else
+//function expression. Cannot be hoisted. Has to be defined in the code before calling it.
+// const speak = function() {
+//   console.log('Good day!');
+// };
 
-//the age below is in the root of the document, has global scope
-const age = 30;
+// greet();
+// greet();
+// greet();
+// greet();
 
-//The age below has a local scope that is only inside the code block
-if(true){
-  const age = 40;
-  let name = 'shaun';
-  console.log('inside 1st code block: ',  age,  name);
+// speak();
+// speak();
+// speak();
+// speak();
 
-  if(true){
-    const age = 50;
-    console.log('inside 2nd code block: ', age);
-  }
-}
+//********Lesson 31********
+//arguments & parameters
 
-console.log('outside code block: ',  age,  name);
+// const speak = function(name = 'Shangela', time = 'night'){
+//   console.log(`Good ${time} ${name}`);
+
+//   };
+
+// speak();  
+// speak('Sauron');
+// speak('Bob', 'morning');
+
+//*****Lesson 32*******
+//Returning values
+
+// const calcArea = function(radius){
+  // let area = 3.14 * radius**2;
+  // return area;
+//   return 3.14 *radius**2;
+// };
+
+// const thing = calcArea(5);
+// console.log('thing');
+
+//*******Lesson 33******
+//regular function
+
+// const calcArea = function(radius){
+//   return 3.14 * radius**2;
+// }
+
+//arrow function
+
+
+// const calcArea = (radius) => {
+//   return 3.14 * radius**2;
+// };
+
+//or when one parameter then the () can go. Also when only one line returned, it can all be on one line and without the return.
+// const calcArea = radius => 3.14 * radius**2;
+
+
+// const area = calcArea(5);
+// console.log('Area is:', area);
+
+// const greet = function(){
+//   return 'hello, world';
+// };
+
+// const greet =() => 'hello, world';
+
+// const result = greet();
+// console.log(result);
+
+// const bill = function(products, tax){
+//   let total = 0;
+//   for(let i = 0; i < products.length; i++){
+//     total+= products[i] + products[i] * tax;
+//   }
+//   return total;
+// }
+
+// const bill = (products, bill) => {
+//   let total = 0;
+//   for(let i = 0; i < products.length; i++){
+//     total+= products[i] + products[i] * tax;
+//   }
+//   return total;
+// }
+
+// console.log(bill([10,15,30], 0.2));
+
+//******Lesson 34 ******
+// const newName = 'Bob';
+//function
+
+// const greet = () => 'hello';
+
+// let resultOne = greet();
+// console.log(resultOne);
+
+//method
+
+// let resultTwo = newName.toUpperCase();
+// console.log(resultTwo);
+
+
+//*****Lesson 35****
+//callbacks & foreach
+
+// const myFunc = (callbackFunc) => {
+//   //do something
+//   let value = 50;
+//   callbackFunc(value);
+// };
+
+// myFunc(value => {
+//   //do something
+//   console.log(value);
+// });
+
+// let people = ['Bob', 'Shangela', 'Trixie', 'Alyssa', 'April'];
+
+// const logPerson = (person, index) => {
+//   console.log(`${index} - hello ${person}`);
+// };
+
+// people.forEach((person, index) => {
+//   console.log(index, person);
+// });
+
+// people.forEach(logPerson);
+
+//*****Lesson 36*****
+//get a reference for the 'ul'
+
+const ul = document.querySelector('.people');
+
+const people = ['Bob', 'Shangela', 'Trixie', 'Alyssa', 'April'];
+
+let html=``;
+
+people.forEach(person => {
+  //create an html template
+  html += `<li style="color:purple">${person}</li>`;
+});
+
+console.log(html);
+ul.innerHTML = html;
